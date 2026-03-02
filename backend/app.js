@@ -5,13 +5,15 @@ const identityRoutes = require('./Routes/identityRoutes')
 
 const app = express()
 app.use(cors({
-    origin:['http://localhost:5173']
+    origin:['http://localhost:5173',
+            'identity-reconciliation-in1q2akkd-sahils-projects-056d726d.vercel.app'
+    ]
 }))
 app.use(express.json());
 
 app.use('/', identityRoutes);
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const startServer = async() => {
     try {
