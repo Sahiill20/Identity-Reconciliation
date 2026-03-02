@@ -15,10 +15,10 @@ const PORT = 3000;
 
 const startServer = async() => {
     try {
-        const connection  = await pool.getConnection();
+        await pool.query("SELECT 1");
         console.log("Database connected successfully")
 
-        connection.release();
+        // connection.release();
 
         app.listen(PORT, ()=>{
             console.log(`Server is running on PORT :- ${PORT}`)
