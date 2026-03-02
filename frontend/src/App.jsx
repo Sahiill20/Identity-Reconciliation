@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+const BASE_URL = import.meta.env.VITE_API_URL;
 
 const App = () => {
 
@@ -20,7 +21,7 @@ const App = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:3000/identify', {
+      const response = await axios.post(`${BASE_URL}/identify`, {
         email: email || null,
         phoneNumber: phoneNumber || null
       });
