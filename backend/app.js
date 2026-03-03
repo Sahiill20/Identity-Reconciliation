@@ -8,6 +8,8 @@ app.use(cors({
     origin:['http://localhost:5173',
             'http://identity-reconciliation-in1q2akkd-sahils-projects-056d726d.vercel.app'
     ],
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true
 }))
 app.use(express.json());
 
