@@ -6,8 +6,8 @@ const identityRoutes = require('./Routes/identityRoutes')
 const app = express()
 app.use(cors({
     origin:['http://localhost:5173',
-            'identity-reconciliation-in1q2akkd-sahils-projects-056d726d.vercel.app'
-    ]
+            'http://identity-reconciliation-in1q2akkd-sahils-projects-056d726d.vercel.app'
+    ],
 }))
 app.use(express.json());
 
