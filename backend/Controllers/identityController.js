@@ -77,7 +77,7 @@ const identifyContact = async (req, res) => {
 
         return res.status(200).json({
             contact: {
-                primaryContatctId: primaryContactId,
+                primaryContactId: primaryContactId,
                 emails: emails,
                 phoneNumbers: phoneNumbers,
                 secondaryContactIds: secondaryContactIds
